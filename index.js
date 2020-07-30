@@ -141,6 +141,6 @@ describe("Transaction", function () {
 // 5. Should return correct balance
 // 6. Should prevent overdraft
 // 7. Should not allow negative deposit
-//////////////////////////////////////
+/////////////////////////////////////
 // 8. Should track multiple deposits and return accurate balance
 // 9. Also, 8. should track multiple charges and return accurate balance
