@@ -1,4 +1,5 @@
 # Setup Boilerplate
+
 1. create repo
 2. clone
 3. cd into
@@ -28,29 +29,29 @@
 
 ```json
 {
-"singleQuotes": true,
-"arrowParens": "always",
-"semi": false
+  "singleQuotes": true,
+  "arrowParens": "always",
+  "semi": false
 }
 ```
+
 9. `npm i -g eslint` || `sudo npm i -g eslint`
 10. `eslint init` && Walk through the steps
 11. in the `.eslint.json` file
 
- 
-
 ```json
 {
-"extends": ["airbnb", "prettier", "plugin:node/recommended"],
-"plugins": ["prettier"],
-"rules": {
-"prettier/prettier": "error",
-"no-unused-vars": "error",
-"no-console": "warn",
-"func-names": "off",
-"object-shorthand": "warn",
-"class-methods-use-this": "warn"
-}
+  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "func-names": "off",
+    "object-shorthand": "warn",
+    "class-methods-use-this": "warn"
+  }
 }
 ```
-- [ESLint Rules](https://eslint.org/docs/rules/)
+
+[ESLint Rules](https://eslint.org/docs/rules/)

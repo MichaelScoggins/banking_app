@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true
+  },
+  "extends": ["plugin:node/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "max-classes-per-file": 0,
+    "prettier/prettier": "error",
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "func-names": "off",
+    "object-shorthand": "warn",
+    "class-methods-use-this": "warn",
+    "endOfLine": "auto"
+  }
+}
