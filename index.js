@@ -4,39 +4,40 @@ const assert = require("assert")
 // input: process.stdin,
 // output: process.stdout,
 // })
-let balance
+// let balance
 
 class BankAccount {
   constructor(accountNumber, owner) {
     this.accountNumber = accountNumber
     this.owner = owner
     this.transactions = []
-    this.balance = 0
+    // this.balance = 0
   }
 
   balance() {
-    // let x = this.transactions.length
-    // for(let i = 0; i < x; i++) {
-    //   x.reduce((x, y) => x + y)
-    // }
-    // return x = balance
+    let total = 0
+    let len = this.transactions.length
+    for (let i = 0; i != len; i++) {
+      total += this.transactions[i].amount
+    }
+    return total
   }
 
   deposit(payee, amt) {
     if (amt > 0) {
       this.transactions.push(new Transaction(amt, payee))
-      this.balance += amt
+      // this.balance += amt
     } else {
       return "Am I a joke to you?"
     }
   }
 
   charge(payee, amt) {
-    if (this.balance - amt < 0) {
+    if (this.balance() - amt < 0) {
       return "Why don't you get a job?"
-    } else if (this.balance - amt > 0) {
+    } else if (this.balance() - amt > 0) {
       this.transactions.push(new Transaction(amt, payee))
-      this.balance -= amt
+      // this.balance -= amt
     }
   }
 }
