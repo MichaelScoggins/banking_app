@@ -11,7 +11,6 @@ class BankAccount {
     this.accountNumber = accountNumber
     this.owner = owner
     this.transactions = []
-    // this.balance = 0
   }
 
   balance() {
@@ -23,10 +22,9 @@ class BankAccount {
     return total
   }
 
-  deposit(payee, amt) {
+  deposit(amt) {
     if (amt > 0) {
-      this.transactions.push(new Transaction(amt, payee))
-      // this.balance += amt
+      return this.transactions.push(new Transaction(amt))
     } else {
       return "Am I a joke to you?"
     }
@@ -36,8 +34,7 @@ class BankAccount {
     if (this.balance() - amt < 0) {
       return "Why don't you get a job?"
     } else if (this.balance() - amt > 0) {
-      this.transactions.push(new Transaction(amt, payee))
-      // this.balance -= amt
+      return this.transactions.push(new Transaction(amt, payee))
     }
   }
 }
