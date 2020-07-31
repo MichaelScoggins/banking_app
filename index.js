@@ -103,8 +103,10 @@ if (typeof describe === "function") {
     })
     it("Should not allow negative deposit", () => {
       const crystalAccount = new BankAccount("001002", "Crystal")
+      crystalAccount.deposit(100)
       crystalAccount.deposit(-1)
-      assert.equal(crystalAccount.deposit(), "Am I a joke to you?")
+      assert.equal(crystalAccount.deposit(-1), "Am I a joke to you?")
+      assert.equal(crystalAccount.balance(), 100)
     })
     it("Should return correct balance after multiple deposits", () => {
       const newAccount = new BankAccount("001003", "Jack")
