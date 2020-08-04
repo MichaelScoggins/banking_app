@@ -4,12 +4,13 @@
     "commonjs": true,
     "es2020": true
   },
-  "extends": ["plugin:node/recommended", "airbnb", "prettier"],
+  "extends": ["airbnb", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 11
+    "ecmaVersion": 11,
+    "sourceType": "module"
   },
   "plugins": ["prettier"],
   "rules": {
